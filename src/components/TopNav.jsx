@@ -1,19 +1,25 @@
 import { Box, Flex, Spacer } from '@chakra-ui/react';
 import viteLogo from '/vite.svg';
+import { Image } from '@chakra-ui/react'
 
 export default function TopNav() {
   return (
     <Flex>
-      <img src={viteLogo} className='logo' alt='Vite logo' />
+      <Image boxSize="70px" src={viteLogo} alt='Vite logo' />
       <div>Guruji</div>
       <Spacer />
-      <Box bg='red.500'>
-        <span>Home</span>&nbsp;
-        <span>Call with astrologer</span>&nbsp;
-        <span>Live (Comming soon)</span>
+      <Box  gridGap={'20px'}fontWeight={'bold'} >
+        <span  style={{marginLeft:"20px", fontSize:"24px", color:'rgb(233 138 69)' }}>Home </span>
+        <span style={{marginLeft:"20px", fontSize:"24px" }} >Call with astrologer</span>&nbsp;
+        <span style={{marginLeft:"20px", fontSize:"24px" }}>Live (Comming soon)</span>
       </Box>
       <Spacer />
-      <Box w='70px' h='10' bg='red.500' />
+      <Image
+        borderRadius='full'
+        boxSize='70px'
+        src='https://bit.ly/dan-abramov'
+        alt='Dan Abramov'
+      />
     </Flex>
   );
 }
